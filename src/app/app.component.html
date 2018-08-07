@@ -1,8 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
 <div class="container">
+
   <div class="row">
-    <app-user *ngFor="let us of users" [user]="us"></app-user>
+    <div class="input-field col s6">
+      <input id="user_name" class="validate" [(ngModel)]="searchName" >
+      <label class="active" for="user_name">First Name</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <app-user *ngFor="let us of users | search:searchName" [user]="us"></app-user>
   </div>
 </div>
 
