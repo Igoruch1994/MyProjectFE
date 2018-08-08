@@ -5,12 +5,14 @@ import {Http} from '@angular/http';
 @Injectable()
 export class UserService {
 
+  userId = '';
+
   constructor(private http: Http) {
 
   }
 
   getAllUsers() {
-    return this.http.get('http://localhost:8082/user/all')
+    return this.http.get('http://localhost:8080/user/all/' + this.userId)
       .pipe(map(response => response.json()))
       .pipe(map(users => {
         console.log(users);
@@ -20,6 +22,10 @@ export class UserService {
           };
         });
       }));
+  }
+
+  setUserId(id) {
+    this.userId = id;
   }
 
 }

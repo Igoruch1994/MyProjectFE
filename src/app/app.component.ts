@@ -9,18 +9,5 @@ import {UserService} from './user.service';
 })
 export class AppComponent {
 
-  users = [];
-  searchName = '';
-
-
-  constructor(private userService: UserService) {
-  }
-
-  ngOnInit() {
-    this.userService.getAllUsers().subscribe(users => {
-      this.users = users;
-      console.log('Users', users);
-    });
-  }
 
 }

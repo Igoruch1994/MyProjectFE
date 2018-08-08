@@ -1,16 +1,18 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">LOGO</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/setup">Setup</a></li>
+    </ul>
+  </div>
+</nav>
+
 <div class="container">
 
-  <div class="row">
-    <div class="input-field col s6">
-      <input id="user_name" class="validate" [(ngModel)]="searchName" >
-      <label class="active" for="user_name">First Name</label>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 
-  <div class="row">
-    <app-user *ngFor="let us of users | search:searchName" [user]="us"></app-user>
-  </div>
 </div>
 
 
