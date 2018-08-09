@@ -1,0 +1,18 @@
+<form>
+  <div class="input-group mb-4">
+    <div class="input-group-prepend">
+      <span class="input-group-text" >Name</span>
+    </div>
+    <input type="text" class="form-control" placeholder="Username" [(ngModel)]="userName" name="userName">
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Email</span>
+    </div>
+    <input type="text" class="form-control" placeholder="Your Email" [(ngModel)]="userEmail" name="userEmail">
+  </div>
+</form>
+
+<button type="button" class="btn btn-primary btn-sm" (click)="login()">Login</button>
+
