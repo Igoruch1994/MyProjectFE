@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from "../service/login.service";
+import {LoginService} from '../service/login.service';
 
 @Component({
   selector: 'app-login-page',
@@ -19,6 +19,7 @@ export class LoginPageComponent implements OnInit {
   login() {
     console.log('UserName', this.userName);
     console.log('UserEmail', this.userEmail);
+    return this.loginService.login();
   }
 
 }

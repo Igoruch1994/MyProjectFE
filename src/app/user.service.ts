@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {map} from 'rxjs/operators';
-import {Http} from '@angular/http';
+import {Http, Headers} from '@angular/http';
 
 @Injectable()
 export class UserService {
@@ -12,10 +12,12 @@ export class UserService {
   }
 
   getAllUsers() {
-    return this.http.get('http://localhost:8080/user/all/' + this.userId)
+    let myHeader = new Headers();
+
+    return this.http.get('http://localhost:8080/user/all/' + this.userId,{withCredentials: true})
       .pipe(map(response => response.json()))
       .pipe(map(users => {
-        console.log(users);
+        console.log('Usserssssss', users);
         return users.map(u => {
           return {
             name: u.firstName + ' ' + u.lastName,
