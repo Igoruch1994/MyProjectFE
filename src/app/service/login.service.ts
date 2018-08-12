@@ -23,7 +23,7 @@ export class LoginService {
     this.http.post(this.loginUrl, JSON.stringify({
       email: 'igor@gmail.com',
       password: 'new'
-    }), { headers: new Headers({ 'Content-Type': 'application/json' }) }).subscribe(
+    }), {withCredentials: true, headers: new Headers({ 'Content-Type': 'application/json' }) }).subscribe(
       res => {
         const response = res.text();
         console.log(response);

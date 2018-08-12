@@ -12,9 +12,7 @@ export class UserService {
   }
 
   getAllUsers() {
-    let myHeader = new Headers();
-
-    return this.http.get('http://localhost:8080/user/all/' + this.userId,{withCredentials: true})
+    return this.http.get('http://localhost:8080/user/all', {withCredentials: true})
       .pipe(map(response => response.json()))
       .pipe(map(users => {
         console.log('Usserssssss', users);
