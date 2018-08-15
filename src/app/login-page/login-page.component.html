@@ -1,24 +1,27 @@
 <div class="row" >
-  <div class="col-md-6" style="padding-top:0px !important; background-image: url('../../../resources/loginImg.png')">
-      <img src='../../../resources/loginImg.png'>
+  <div class="d-none d-md-block col-lg-5 img-padding">
+      <img src='../../../resources/login.jpg' class="gradient login-img-left">
   </div>
-  <div class="col-md-6">
-    <form>
-      <div class="input-group mb-4">
-        <div class="input-group-prepend">
-          <span class="input-group-text">Name</span>
-        </div>
-        <input type="text" class="form-control" placeholder="Username" [(ngModel)]="userName" name="userName">
-      </div>
+  <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 login-img-right">
 
-      <div class="input-group mb-3">
+    <img src="../../../resources/logo.jpg" class="img center logo" alt="Cinque Terre">
+
+    <form style="margin-right: 25%; margin-left: 25%">
+      <div class="input-group mb-4">
         <div class="input-group-prepend">
           <span class="input-group-text">Email</span>
         </div>
-        <input type="text" class="form-control" placeholder="Your Email" [(ngModel)]="userEmail" name="userEmail">
+        <input type="text" class="form-control" placeholder="Your email" [(ngModel)]="userName" name="userName">
+      </div>
+
+      <div class="input-group mb-3" >
+        <div class="input-group-prepend">
+          <span class="input-group-text">Password</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Your password" [(ngModel)]="userEmail" name="userEmail">
       </div>
     </form>
 
-    <button type="button" class="btn btn-primary btn-sm" (click)="login()">Login</button>
+    <button style=" margin-left: 65%" type="button" class="btn btn-primary btn-sm" (click)="login()">Login</button>
   </div>
 </div>
