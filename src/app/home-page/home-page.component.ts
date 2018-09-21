@@ -17,10 +17,16 @@ export class HomePageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userService.getAllUsers().subscribe(users => {
+    this.userService.getAllUsers().subscribe(u => {
+      this.users = u;
+      console.log(this.users);
+    });
+    /*this.userService.getAllUsers().subscribe(users => {
       this.users = users;
       console.log('Users', users);
-    });
+    });*/
   }
 
 }
+
+

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LoginService} from '../service/login.service';
+import {LoginForm} from '../interface/LoginForm';
 
 @Component({
   selector: 'app-login-page',
@@ -8,18 +9,23 @@ import {LoginService} from '../service/login.service';
 })
 export class LoginPageComponent implements OnInit {
 
-  userName;
   userEmail;
+  userPassword;
+  loginForm: LoginForm;
 
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService) {
+  }
 
   ngOnInit() {
   }
 
   login() {
-    console.log('UserName', this.userName);
+    console.log('UserPassword', this.userPassword);
     console.log('UserEmail', this.userEmail);
-    return this.loginService.login();
+
+    /*this.loginForm.email = this.userEmail;
+    this.loginForm.password = this.userPassword;*/
+    return this.loginService.login(this.userEmail, this.userPassword);
   }
 
 }

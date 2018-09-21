@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UserService} from './user.service';
 import {LoginService} from './service/login.service';
 
@@ -8,7 +8,10 @@ import {LoginService} from './service/login.service';
   styleUrls: ['./app.component.scss'],
   providers: [UserService, LoginService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
+  ngOnInit() {
+    console.log('OnInit execution ...');
+  }
 
 }

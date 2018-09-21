@@ -3,10 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {UserComponent} from './user/user.component';
-import {HttpModule} from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import {HoverDirective} from './hover.directive';
 import {FormsModule} from '@angular/forms';
-import {SearchPipe} from './search.pipe';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SetupPageComponent } from './setup-page/setup-page.component';
 import {RouterModule} from '@angular/router';
@@ -14,17 +13,23 @@ import { LoginPageComponent } from './login-page/login-page.component';
 
 const routes = [
   {path: '', component: HomePageComponent},
+  {path: 'home', component: HomePageComponent},
   {path: 'setup', component: SetupPageComponent},
   {path: 'login', component: LoginPageComponent}
 ];
 
 @NgModule({
   declarations: [
-    AppComponent, UserComponent, HoverDirective, SearchPipe, HomePageComponent, SetupPageComponent, LoginPageComponent
+    AppComponent,
+    UserComponent,
+    HoverDirective,
+    HomePageComponent,
+    SetupPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     FormsModule,
     RouterModule.forRoot(routes)
   ],
