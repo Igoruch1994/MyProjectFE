@@ -10,6 +10,14 @@ import {LoginService} from './service/login.service';
 })
 export class AppComponent implements OnInit {
 
+  constructor(private loginService: LoginService) {
+  }
+
+  logout() {
+    this.loginService.logout().subscribe(lists => {console.log(lists);
+    });
+  }
+
   ngOnInit() {
     console.log('OnInit execution ...');
   }

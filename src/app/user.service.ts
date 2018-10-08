@@ -13,16 +13,6 @@ export class UserService {
   }
 
   getAllUsers(): Observable<User[]> {
-    /*return this.http.get('http://localhost:8080/user/all', {withCredentials: true})
-      .pipe(map(response => response.json()))
-      .pipe(map(users => {
-        console.log('Usserssssss', users);
-        return users.map(u => {
-          return {
-            name: u.firstName + ' ' + u.lastName,
-          };
-        });
-      }));*/
     return this.http.get<User[]>('http://localhost:8080/user/all', {withCredentials: true});
   }
 
