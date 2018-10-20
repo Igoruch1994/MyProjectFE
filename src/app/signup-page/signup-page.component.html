@@ -1,0 +1,50 @@
+<div class="row" >
+  <div class="col xs-7 col sm-7 col md-7 col lg-7">
+    <form>
+      <div class="input-group mb-4">
+        <div class="input-group-prepend">
+          <span class="input-group-text">First Name</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Your email" [(ngModel)]="firstName" name="firstName">
+      </div>
+
+      <div class="input-group mb-3" >
+        <div class="input-group-prepend">
+          <span class="input-group-text">Last Name</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Your password" [(ngModel)]="lastName" name="lastName">
+      </div>
+
+      <div class="input-group mb-3" >
+        <div class="input-group-prepend">
+          <span class="input-group-text">Phone</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Your password" [(ngModel)]="phone" name="phone">
+      </div>
+
+      <div class="input-group mb-3" >
+        <div class="input-group-prepend">
+          <span class="input-group-text">Email</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Your password" [(ngModel)]="email" name="email">
+      </div>
+
+
+      <div class="input-group mb-3" >
+        <div class="input-group-prepend">
+          <span class="input-group-text">Password</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Your password" [(ngModel)]="password" name="password">
+      </div>
+
+      <div class="input-group mb-3" >
+        <div class="input-group-prepend">
+          <span class="input-group-text">Password Confirm</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Your password" [(ngModel)]="passwordConfirm" name="passwordConfirm">
+      </div>
+    </form>
+
+    <button  type="button" class="btn btn-primary btn-sm" (click)="signUp()">Sign Up</button>
+  </div>
+</div>

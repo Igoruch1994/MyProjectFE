@@ -10,10 +10,12 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { SetupPageComponent } from './setup-page/setup-page.component';
 import {RouterModule} from '@angular/router';
 import { LoginPageComponent } from './login-page/login-page.component';
+import {SignUpComponent} from './signup-page/signup-page.component';
 
 const routes = [
   {path: '', component: HomePageComponent},
   {path: 'home', component: HomePageComponent},
+  {path: 'signup', component: SignUpComponent},
   {path: 'setup', component: SetupPageComponent},
   {path: 'login', component: LoginPageComponent}
 ];
@@ -25,7 +27,8 @@ const routes = [
     HoverDirective,
     HomePageComponent,
     SetupPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

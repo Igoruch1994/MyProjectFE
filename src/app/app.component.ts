@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from './user.service';
 import {LoginService} from './service/login.service';
+import {SignUpService} from './service/signup.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [UserService, LoginService]
+  providers: [UserService, LoginService, SignUpService]
 })
 export class AppComponent implements OnInit {
 
@@ -14,8 +15,7 @@ export class AppComponent implements OnInit {
   }
 
   logout() {
-    this.loginService.logout().subscribe(lists => {console.log(lists);
-    });
+    this.loginService.logout();
   }
 
   ngOnInit() {
